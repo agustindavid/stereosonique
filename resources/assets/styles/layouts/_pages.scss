@@ -1,0 +1,107 @@
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+.hero {
+  padding: 2rem 0 0 0;
+  background-color: #000;
+}
+
+.work-type {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+
+  .wt-img {
+    position: relative;
+
+    img {
+      position: relative;
+      transition: 0.25s all ease;
+
+      &.hover {
+        opacity: 0;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+      }
+    }
+
+    &:hover {
+      img {
+        opacity: 0;
+      }
+
+      img {
+        &.hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+section.works {
+  padding: 3rem 0;
+}
+
+section.showreel {
+  background-color: #000;
+  color: #fff;
+  padding: 3rem 0;
+
+  h2 {
+    text-transform: uppercase;
+  }
+}
+
+.description {
+  padding-top: 3rem;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  opacity: 0.74;
+}
+
+.gradient-bg {
+  background-image: linear-gradient(270deg, #FF8F11 0%, #ff8f33 100%);
+  color: #000;
+}
+
+.tagline {
+  z-index: 3;
+  padding-left: 4rem;
+}
+
+.work-item-wrap {
+  position: relative;
+
+  .overlay-square {
+    background-color: rgba($color: #ffffff, $alpha: 0.65);
+    color: #000;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.25s all ease;
+
+    a {
+      color: #000;
+    }
+  }
+
+  &:hover {
+    .overlay-square {
+      opacity: 1;
+    }
+  }
+}
